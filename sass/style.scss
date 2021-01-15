@@ -25,13 +25,14 @@ h2 {
   font-weight: 500;
 }
 
+h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
 p {
   color: $color-gray-2;
   font-weight: 400;
-}
-
-h1 {
-  font-size: 3rem;
 }
 
 label,
@@ -49,6 +50,17 @@ span {
 @mixin button-style {
   background-color: $color-blue;
   color: white;
+  font-size: 0.9rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 10px;
+}
+
+.btn {
+  @include button-style();
+}
+
+section {
+  margin-bottom: 200px;
 }
 
 /**************** HEADER ******************/
@@ -96,6 +108,7 @@ h1.logo {
     color: $color-blue;
   }
   h1 {
+    font-size: 3rem;
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -123,12 +136,50 @@ h1.logo {
     align-items: center;
   }
   .btn {
-    font-size: 0.9rem;
-    margin: 0;
     color: white;
-    background-color: $color-blue;
-    padding: 0.4rem 1.2rem;
-    border-radius: 10px;
+    margin: 0;
     margin-left: -70px;
   }
+}
+
+/**************** SECTION SERVICES ******************/
+
+.content-services {
+  display: flex;
+  width: 100%;
+  .services-box {
+    .btn {
+      background-color: #e0e0e0;
+      color: #828282;
+    }
+  }
+}
+
+.services-box {
+  padding: 30px;
+  background: gray;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 16px;
+  img {
+    width: 30px;
+  }
+}
+
+.icon-blue {
+  background-color: #2d9cdb;
+}
+
+.icon-green {
+  background-color: #27ae60;
+}
+
+.icon-red {
+  background-color: #eb5757;
 }
